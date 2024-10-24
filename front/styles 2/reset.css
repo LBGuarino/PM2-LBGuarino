@@ -1,0 +1,79 @@
+/* Reset básico para la mayoría de los elementos */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font: inherit;
+}
+
+/* Mejora para la tipografía en todo el documento */
+html {
+    font-size: 100%;
+    line-height: 1.5;
+    -webkit-text-size-adjust: 100%; /* Evita que iOS ajuste el tamaño del texto automáticamente */
+    scroll-behavior: smooth; /* Navegación más suave */
+}
+
+body {
+    margin: 0;
+    font-family: system-ui, sans-serif; /* Usa fuentes del sistema para mejor rendimiento */
+    font-size: 1rem;
+    background-color: #fff; /* Fijar color de fondo */
+    color: #000; /* Color de texto predeterminado */
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+}
+
+/* Asegurar que las imágenes y videos escalen correctamente */
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Eliminar decoraciones y comportamiento predeterminado de los enlaces */
+a {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+
+/* Remover estilos de listas */
+ul, ol {
+    list-style: none;
+}
+
+/* Manejo para botones y otros controles interactivos */
+button, input, textarea, select {
+    font-family: inherit;
+    font-size: 100%;
+    background: none;
+    border: none;
+    outline: none;
+    padding: 0;
+    margin: 0;
+}
+
+button {
+    cursor: pointer;
+}
+
+/* Mejora de accesibilidad: asegura que los elementos ocultos no interfieran */
+[hidden] {
+    display: none;
+}
+
+/* Tablas sin espacio entre celdas */
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+}
+
+/* Establecer altura mínima para el body para asegurar que ocupe toda la ventana */
+html, body {
+    min-height: 100%;
+}
+
