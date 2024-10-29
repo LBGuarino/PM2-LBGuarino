@@ -22,20 +22,26 @@ nav header {
 }
 
 nav header h1 {
-  font-family: 'Playfair Display', serif;
+  font-family: 'Cinzel', serif;
   font-size: 4rem; 
   font-weight: 900; 
   letter-spacing: 0.1em; 
-  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5); 
+  text-shadow: 0 0 8px rgba(255, 99, 71, 0.2);
   color: #333; 
-  background: linear-gradient(135deg, #ff7e5f, #feb47b); 
+  background: linear-gradient(45deg, #D4A373, #C06C4C); 
   background-clip: text; 
   -webkit-text-fill-color: transparent; 
   padding: 10px 20px; 
   text-transform: uppercase; 
   display: inline-block;
+  transition: all 0.5s ease-in-out; 
 }
 
+nav header h1:hover {
+  color: #fff;
+  text-shadow: 0 0 15px rgba(255, 165, 0, 0.6), 0 0 25px rgba(255, 99, 71, 0.8);
+  transform: scale(1.05);
+}
 
 nav ul {
   list-style: none;
@@ -88,21 +94,21 @@ main section {
 }
 
 h2 {
+  text-transform: uppercase;
+  text-decoration: none;
   font-family: 'Roboto', sans-serif;
   font-size: 3.2rem;
   color: #f0e9e9;
-  text-shadow: 
-  1px 1px 0 rgb(97, 46, 46),  
-  -1px -1px 0 rgb(97, 46, 46), 
-  1px -1px 0 rgb(97, 46, 46),  
-  -1px 1px 0 rgb(97, 46, 46);  
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
   text-align: center;
   margin-bottom: 1em;
   letter-spacing: 0.1em;
   font-weight: 700;
   text-transform: uppercase;
   position: relative;
+  transition: 1s;
 }
+
 
 h2::after {
   content: '';
@@ -132,12 +138,22 @@ h3::before {
   margin-right: 10px;
 }
 
-p {
-  font-size: 1.8rem; 
-  color: #302f2f; 
-  text-align: justify;
-  line-height: 1.8;
-  font-weight: 400;
+article div p {
+  font-family: 'Roboto', sans-serif; /* O utiliza la misma tipografía que usas en el resto */
+  font-size: 2rem; 
+  color: #ece3dc; 
+  letter-spacing: 1px; 
+  text-transform: uppercase; 
+  text-align: center; 
+  margin-top: 20px; 
+  padding: 10px 0;
+  border-bottom: 1px solid #d3c3b8; 
+  transition: 0.5s;
+}
+
+article div p:hover {
+  color: #ffffff;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5); 
 }
 
 .cards-container {
@@ -213,9 +229,89 @@ p {
 }
 
 footer {
-  background-color: #111;
+  background-color: #292828;
   padding: 2em;
   text-align: center;
+}
+
+.newsletter-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 800px; 
+  margin: 0 auto; 
+  
+}
+
+.newsletter-container h4 {
+  margin: 0;
+  font-size: 1.5rem; 
+}
+
+.newsletter-container form {
+  flex: 1;
+  margin-left: 20px; 
+  max-width: 400px; 
+}
+
+fieldset {
+  display: block;
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  margin: 20px auto;
+  position:relative;
+}
+
+fieldset legend {
+  font-size: 1.5rem;
+  color: #333;
+  padding: 0 10px;
+  font-weight: bold;
+}
+
+fieldset label {
+  display: block;
+  font-size: 0.9rem;
+  color: #555;
+  margin-bottom: 8px;
+}
+
+fieldset input {
+  width: 100%;
+  padding: 12px 15px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 15px;
+  box-sizing: border-box;
+}
+
+fieldset input:focus {
+  border-color: #6c63ff;
+  box-shadow: 0 0 0 4px rgba(108, 99, 255, 0.2);
+  outline: none;
+}
+
+fieldset button {
+  padding: 12px 20px;
+  background-color: #727272;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  width: 100%;
+}
+
+fieldset button:hover {
+  background-color: #ccc374;
+  box-shadow: 0 3px 6px #6e6d11;
 }
 
 footer h4 {
@@ -273,5 +369,15 @@ footer h4::before {
 
   .card {
     width: 100%; 
+  }
+
+  @media (max-width: 480px) {
+    .email-fieldset {
+      padding: 15px;
+    }
+  
+    .email-fieldset legend {
+      font-size: 1.2rem;
+    }
   }
 }
