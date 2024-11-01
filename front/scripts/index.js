@@ -7,7 +7,7 @@ const repository = new Repository();
 const fetchData = async () => {
   try {
     console.log("Estamos intentando hacer una solicitud");
-    const data = await axios.get("https://students-api.up.railway.app/movies");
+    const data = await axios.get("http://localhost:3000/movies");
     (data.data).forEach((movieData) => {
       const movie = new Movies(
         movieData.title,
