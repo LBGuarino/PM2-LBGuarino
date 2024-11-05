@@ -187,6 +187,23 @@ li img:hover {
   transform: scale(1.05);
 }
 
+#send {
+  background-color: #727272;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  width: 20%;
+}
+
+#send:hover {
+  background-color: #ccc374;
+  box-shadow: 0 3px 6px #6e6d11;
+}
+
+
 footer {
   background-color: #292828;
   padding: 2em;
