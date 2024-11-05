@@ -1,5 +1,3 @@
-const axios = require('axios');
-
 document.addEventListener('DOMContentLoaded', () => {
     const movieForm = document.getElementById('movieForm');
     const yearSelect = document.getElementById('yearSelect');
@@ -53,7 +51,7 @@ function setupFormValidation() {
     const forms = document.querySelectorAll(".needs-validation");
     forms.forEach(form => {
         form.addEventListener("submit", async (event) => {
-            event.preventDefault();  // Prevent default submission
+            event.preventDefault();  
 
             if (!form.checkValidity()) {
                 event.stopPropagation();
@@ -61,7 +59,6 @@ function setupFormValidation() {
             } else {
                 form.classList.add("was-validated");
 
-                // Collect all form data
                 const formData = {
                     movieTitle: document.getElementById('movieTitle').value,
                     yearSelect: document.getElementById('yearSelect').value,
