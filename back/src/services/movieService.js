@@ -6,6 +6,10 @@ module.exports = {
         return movies;
     },
 
-    createUser: async () => {}
+    createMovie: async (movieData) => {
+        const newMovie = await Movie.create(movieData);
+        console.log(newMovie);
+        return newMovie;
+    },
 };
 

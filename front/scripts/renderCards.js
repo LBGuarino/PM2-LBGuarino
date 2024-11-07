@@ -14,6 +14,7 @@ const renderMovies = (repository) => {
         <img src="${movie.poster}" alt="${movie.title} poster" />
       </a>
       <div>
+        <p>Release year: ${movie.year}</p>
         <p>Director: ${movie.director}</p>
         <p>Duration: ${movie.duration}</p>
         <p>Genre: ${movie.genre.join(", ")}</p>
